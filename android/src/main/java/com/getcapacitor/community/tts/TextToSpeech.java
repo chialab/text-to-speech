@@ -86,10 +86,10 @@ public class TextToSpeech extends Plugin implements android.speech.tts.TextToSpe
             float pitchRate = call.getFloat("pitchRate", 1.0f);
             double volume = call.getDouble("volume", 1.0);
 
-            if (!supportedLocales.contains(Locale.forLanguageTag((locale)))) {
-                call.error(ERROR_UNSUPPORTED_LOCALE);
-                return;
-            }
+            // if (!supportedLocales.contains(Locale.forLanguageTag((locale)))) {
+            //     call.error(ERROR_UNSUPPORTED_LOCALE);
+            //     return;
+            // }
 
             if (tts == null || !ttsInitialized) {
                 call.error(ERROR_TTS_NOT_INITIALIZED);
